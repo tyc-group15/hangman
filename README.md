@@ -2,7 +2,7 @@
  hangman web app made with react
 
 # how to run 
-:exclamation_mark: in cmd line, do the following
+:exclamation: in cmd line, do the following
 - navigate to the folder where you've cloned this repo
 - `npm install`
 - `npm start`
