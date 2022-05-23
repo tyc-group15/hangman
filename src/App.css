@@ -24,4 +24,11 @@
   padding: 10%;
   background-color: #454952;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  margin: 1%;
+  background-color: white;
 }
