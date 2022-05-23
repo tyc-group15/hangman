@@ -1,88 +1,140 @@
-export const AlphabetInput = () => {
-  return (
-    <table>
+export const AlphabetInput = ({ setLetter }) => (
+  <table>
+    <tbody>
       <tr>
         <td>
-          <button value={"A"}>A</button>
+          <button value="A" onClick={(event) => setLetter(event.target.value)}>
+            A
+          </button>
         </td>
         <td>
-          <button value={"B"}>B</button>
+          <button value="B" onClick={(event) => setLetter(event.target.value)}>
+            B
+          </button>
         </td>
         <td>
-          <button value={"C"}>C</button>
+          <button value="C" onClick={(event) => setLetter(event.target.value)}>
+            C
+          </button>
         </td>
         <td>
-          <button value={"D"}>D</button>
+          <button value="D" onClick={(event) => setLetter(event.target.value)}>
+            D
+          </button>
         </td>
         <td>
-          <button value={"E"}>E</button>
+          <button value="E" onClick={(event) => setLetter(event.target.value)}>
+            E
+          </button>
         </td>
         <td>
-          <button value={"F"}>F</button>
+          <button value="F" onClick={(event) => setLetter(event.target.value)}>
+            F
+          </button>
         </td>
         <td>
-          <button value={"G"}>G</button>
+          <button value="G" onClick={(event) => setLetter(event.target.value)}>
+            G
+          </button>
         </td>
         <td>
-          <button value={"H"}>H</button>
+          <button value="H" onClick={(event) => setLetter(event.target.value)}>
+            H
+          </button>
         </td>
         <td>
-          <button value={"I"}>I</button>
+          <button value="I" onClick={(event) => setLetter(event.target.value)}>
+            I
+          </button>
         </td>
         <td>
-          <button value={"J"}>J</button>
+          <button value="J" onClick={(event) => setLetter(event.target.value)}>
+            J
+          </button>
         </td>
         <td>
-          <button value={"K"}>K</button>
+          <button value="K" onClick={(event) => setLetter(event.target.value)}>
+            K
+          </button>
         </td>
         <td>
-          <button value={"L"}>L</button>
+          <button value="L" onClick={(event) => setLetter(event.target.value)}>
+            L
+          </button>
         </td>
         <td>
-          <button value={"M"}>M</button>
+          <button value="M" onClick={(event) => setLetter(event.target.value)}>
+            M
+          </button>
         </td>
       </tr>
       <tr>
         <td>
-          <button value={"N"}>N</button>
+          <button value="N" onClick={(event) => setLetter(event.target.value)}>
+            N
+          </button>
         </td>
         <td>
-          <button value={"O"}>O</button>
+          <button value="O" onClick={(event) => setLetter(event.target.value)}>
+            O
+          </button>
         </td>
         <td>
-          <button value={"P"}>P</button>
+          <button value="P" onClick={(event) => setLetter(event.target.value)}>
+            P
+          </button>
         </td>
         <td>
-          <button value={"Q"}>Q</button>
+          <button value="Q" onClick={(event) => setLetter(event.target.value)}>
+            Q
+          </button>
         </td>
         <td>
-          <button value={"R"}>R</button>
+          <button value="R" onClick={(event) => setLetter(event.target.value)}>
+            R
+          </button>
         </td>
         <td>
-          <button value={"S"}>S</button>
+          <button value="S" onClick={(event) => setLetter(event.target.value)}>
+            S
+          </button>
         </td>
         <td>
-          <button value={"T"}>T</button>
+          <button value="T" onClick={(event) => setLetter(event.target.value)}>
+            T
+          </button>
         </td>
         <td>
-          <button value={"U"}>U</button>
+          <button value="U" onClick={(event) => setLetter(event.target.value)}>
+            U
+          </button>
         </td>
         <td>
-          <button value={"V"}>V</button>
+          <button value="V" onClick={(event) => setLetter(event.target.value)}>
+            V
+          </button>
         </td>
         <td>
-          <button value={"W"}>W</button>
+          <button value="W" onClick={(event) => setLetter(event.target.value)}>
+            W
+          </button>
         </td>
         <td>
-          <button value={"X"}>X</button>
+          <button value="X" onClick={(event) => setLetter(event.target.value)}>
+            X
+          </button>
         </td>
         <td>
-          <button value={"Y"}>Y</button>
+          <button value="Y" onClick={(event) => setLetter(event.target.value)}>
+            Y
+          </button>
         </td>
         <td>
-          <button value={"Z"}>Z</button>
+          <button value="Z" onClick={(event) => setLetter(event.target.value)}>
+            Z
+          </button>
         </td>
       </tr>
-    </table>
-  );
-};
+    </tbody>
+  </table>
+);

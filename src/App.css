@@ -1,11 +1,14 @@
 .App {
   text-align: center;
   background-color: #777e8d;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
-  height: 10vmin;
+  max-height: 10vh;
   pointer-events: none;
 }
 
@@ -20,30 +23,29 @@
 }
 
 #gameContainer {
+  display: inline-block;
   margin: 2% 10% 2% 10%;
-  padding: 10%;
+  padding: 2%;
   background-color: #454952;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
 }
 
 #container {
   margin: 1%;
   background-color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
   background-color: #8e96a7;
   border: none;
-  height: 40px;
   min-width: 50px;
   font-size: 25px;
   border-radius: 10px;
-  padding: 5%;
-  margin: 10%;
+  padding: 1%;
+  margin: 1%;
   text-align: center;
 }
 
