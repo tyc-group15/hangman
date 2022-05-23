@@ -24,6 +24,7 @@
 
 #gameContainer {
   display: inline-block;
+  flex-direction: column;
   margin: 2% 10% 2% 10%;
   padding: 2%;
   background-color: #454952;
@@ -34,7 +35,8 @@
   margin: 1%;
   background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -47,6 +49,7 @@ button {
   padding: 1%;
   margin: 1%;
   text-align: center;
+  text-transform: capitalize;
 }
 
 button:hover {

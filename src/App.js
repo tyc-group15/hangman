@@ -11,9 +11,7 @@ function App() {
     console.log("in app, this is the letter:", letter);
   });
 
-  const endGame = () => {
-    
-  }
+  const newGame = () => {}
 
   return (
     <div className="App">
@@ -39,6 +37,7 @@ function App() {
         <div id="container" style={{ backgroundColor: "transparent" }}>
           <AlphabetInput setLetter={setLetter} />
         </div>
+        <button onClick={newGame}>New game</button>
       </div>
     </div>
   );
