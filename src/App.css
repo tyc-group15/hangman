@@ -50,6 +50,7 @@ button {
   margin: 1%;
   text-align: center;
   text-transform: capitalize;
+  border: 2px solid transparent;
 }
 
 button:hover {
