@@ -1,5 +1,6 @@
 import hangman from "./hangman.png";
 import "./App.css";
+import {AlphabetInput} from "./Components/AlphabetInput";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
         <div id="container">
           <p>this is where we have the incorrectly guessed letters</p>
         </div>
-        <div id="container">
-          <p>buttons for the alphabets</p>
+        <div id="container" style={{backgroundColor: "transparent"}}>
+          <AlphabetInput/>
         </div>
       </div>
       <button>New game</button>

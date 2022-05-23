@@ -31,14 +31,23 @@
 #container {
   margin: 1%;
   background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
 button {
   background-color: #8e96a7;
   border: none;
-  height: 50px;
+  height: 40px;
   min-width: 50px;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 10px;
-  padding: 2%;
+  padding: 5%;
+  margin: 10%;
+  text-align: center;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid white;
 }
