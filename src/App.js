@@ -25,6 +25,7 @@ function App() {
           <p>buttons for the alphabets</p>
         </div>
       </div>
+      <button>New game</button>
     </div>
   );
 }

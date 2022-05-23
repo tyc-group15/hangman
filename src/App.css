@@ -16,11 +16,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-
+  max-height: 10vh;
 }
 
 #gameContainer {
-  margin: 10%;
+  margin: 2% 10% 2% 10%;
   padding: 10%;
   background-color: #454952;
   border-radius: 10px;
@@ -31,4 +31,14 @@
 #container {
   margin: 1%;
   background-color: white;
+}
+
+button {
+  background-color: #8e96a7;
+  border: none;
+  height: 50px;
+  min-width: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 2%;
 }
