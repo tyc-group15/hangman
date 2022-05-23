@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 import hangman from "./hangman.png";
 import "./App.css";
 import { AlphabetInput } from "./Components/AlphabetInput";
+import { wordRandomiser } from './Components/WordRandomiser';
 
 function App() {
-  const [letter, setLetter] = useState(String);
+  const [letter, setLetter] = useState(String); // stores the letter that the user has clicked on
+  const answer = wordRandomiser(); // randomly chooses a word for the user to choose
 
   useEffect(() => {
     console.log("in app, this is the letter:", letter);
+    console.log(answer);
   });
 
   const newGame = () => {}
