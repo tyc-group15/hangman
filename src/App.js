@@ -15,6 +15,7 @@ function App() {
   const [mistakes, setMistakes] = useState(0);
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     seek();
@@ -28,6 +29,19 @@ function App() {
           setMistakes(wrongLetters.length);
         }
       }
+
+      checkWin();
+    }
+
+    function checkWin() {
+      if (mistakes === 10) setStatus("lose");
+
+      setStatus("win");
+      answer.split("").forEach((letter) => {
+        if (!correctLetters.includes(letter)) {
+          setStatus("");
+        }
+      });
     }
   }, [letter, wrongLetters, correctLetters]);
 
