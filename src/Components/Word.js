@@ -7,9 +7,9 @@ export const Word = ({ answer, correctLetters }) => {
             {correctLetters.includes(letter) ? (
               <p>&nbsp;&nbsp;{letter}&nbsp;&nbsp;</p>
             ) : letter === " " ? (
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+              <p>&nbsp;&nbsp;</p>
             ) : (
-              <p>&nbsp; ____ &nbsp;</p>
+              <p>&nbsp; __ &nbsp;</p>
             )}
           </span>
         );
