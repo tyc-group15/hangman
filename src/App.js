@@ -7,6 +7,7 @@ import { wordRandomiser } from "./Components/WordRandomiser";
 import { HangmanCanvas } from "./Components/HangmanCanvas";
 import { Word } from "./Components/Word";
 import { WrongLetters } from "./Components/WrongLetters";
+import { Popup } from "./Components/Popup";
 
 function App() {
   const [answer, setAnswer] = useState(String); // randomly chooses a word for the user to guess
@@ -54,7 +55,7 @@ function App() {
     setCorrectLetters([]);
     setWrongLetters([]);
     setLetter("");
-    setStatus("");
+    setStatus("lose");
   };
 
   return (
@@ -85,6 +86,9 @@ function App() {
       ) : (
         <button onClick={newGame}>New game</button>
       )}
+      {status === "lose" || status === "win" ? (
+        <Popup answer={answer} status={status} newGame={newGame} />
+      ) : null}
     </div>
   );
 }
