@@ -43,7 +43,7 @@ function App() {
         }
       });
     }
-  }, [letter, wrongLetters, correctLetters]);
+  }, [letter, wrongLetters, correctLetters, answer, mistakes]);
 
   const newGame = () => {
     setPlayable(true);
