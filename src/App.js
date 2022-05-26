@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import hangman from "./hangman.png";
 import "./App.css";
 import { AlphabetInput } from "./Components/AlphabetInput";
-import { wordRandomiser } from './Components/WordRandomiser';
+import { wordRandomiser } from "./Components/WordRandomiser";
+import { HangmanCanvas } from "./Components/HangmanCanvas";
 
 function App() {
   const [answer, setAnswer] = useState(String); // randomly chooses a word for the user to guess
@@ -17,6 +18,19 @@ function App() {
     console.log("in app, this is the letter:", letter);
     console.log(answer);
   });
+    seek();
+    function seek() {
+      if (answer.includes(letter)) {
+        if (!correctLetters.includes(letter))
+          setCorrectLetters((currentLetters) => [...currentLetters, letter]);
+      } else {
+        if (!wrongLetters.includes(letter)) {
+          setWrongLetters((currentLetters) => [...currentLetters, letter]);
+          setMistakes(wrongLetters.length);
+        }
+      }
+    }
+  }, [letter, wrongLetters, correctLetters]);
 
   const newGame = () => {
     setPlayable(true);
@@ -33,26 +47,34 @@ function App() {
         <img src={hangman} className="App-logo" alt="logo" />
         <h1>team 15's HANGMAN</h1>
       </header>
-      <div id="gameContainer">
-        <div id="container">
-          <p>Lives left</p>
+      {playable ? (
+        <div id="gameContainer">
+          <div id="container">
+            <p>Lives: {10-mistakes}</p>
+          </div>
+          <div id="container">
+          </div>
+          <div id="container">
+            {answer.split("").map((letter, i) => 
+          <span className="letter" key={i}>
+            {correctLetters.includes(letter) ? <p>&nbsp;{letter}&nbsp;</p>: <p>&nbsp; ____ &nbsp;</p>}
+          </span>
+            )}
+          </div>
+          <div id="container">
+            <p>Wrong Letters:</p>
+            {wrongLetters.map((letter) => (
+              <p> &nbsp;{letter}&nbsp; </p>
+            ))}
+          </div>
+          <div id="container">
+            <AlphabetInput setLetter={setLetter} />
+          </div>
+          <button onClick={newGame}>New game</button>
         </div>
-        <div id="container">
-          <p>hangman drawing, where the animation is supposed to be</p>
-        </div>
-        <div id="container">
-          <p>
-            this is where we have what the user has correctly guessed so far
-          </p>
-        </div>
-        <div id="container">
-          <p>this is where we have the incorrectly guessed letters</p>
-        </div>
-        <div id="container" style={{ backgroundColor: "transparent" }}>
-          <AlphabetInput setLetter={setLetter} />
-        </div>
+      ) : (
         <button onClick={newGame}>New game</button>
-      </div>
+      )}
     </div>
   );
 }
