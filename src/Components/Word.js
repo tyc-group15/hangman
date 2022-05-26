@@ -9,7 +9,7 @@ export const Word = ({ answer, correctLetters }) => {
             ) : letter === " " ? (
               <p>&nbsp;&nbsp;</p>
             ) : (
-              <p>&nbsp; __ &nbsp;</p>
+              <p>&nbsp; _ &nbsp;</p>
             )}
           </span>
         );
