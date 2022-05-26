@@ -6,15 +6,26 @@ import { AlphabetInput } from "./Components/AlphabetInput";
 import { wordRandomiser } from './Components/WordRandomiser';
 
 function App() {
+  const [answer, setAnswer] = useState(String); // randomly chooses a word for the user to guess
+  const [playable, setPlayable] = useState(Boolean);
   const [letter, setLetter] = useState(String); // stores the letter that the user has clicked on
-  const answer = wordRandomiser(); // randomly chooses a word for the user to guess
+  const [mistakes, setMistakes] = useState(0);
+  const [correctLetters, setCorrectLetters] = useState([]);
+  const [wrongLetters, setWrongLetters] = useState([]);
 
   useEffect(() => {
     console.log("in app, this is the letter:", letter);
     console.log(answer);
   });
 
-  const newGame = () => {}
+  const newGame = () => {
+    setPlayable(true);
+    setAnswer(wordRandomiser()); // randomly chooses a word for the user to guess
+    // Empty consts
+    setCorrectLetters([]);
+    setWrongLetters([]);
+    setLetter("");
+  };
 
   return (
     <div className="App">
