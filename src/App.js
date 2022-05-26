@@ -43,6 +43,7 @@ function App() {
         if (letter === " ") return;
         if (!correctLetters.includes(letter)) {
           setStatus("");
+          return;
         }
       });
     }
@@ -61,7 +62,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={hangman} className="App-logo" alt="logo" />
-        <h1>team 15's HANGMAN</h1>
+        <h2>hangman</h2>
       </header>
         <div id="gameContainer">
           <div id="container">

@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: #777e8d;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -19,7 +18,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  text-transform: capitalize;
   max-height: 10vh;
 }
 
@@ -29,6 +29,7 @@
   margin: 0% 10% 2% 10%;
   background-color: #454952;
   border-radius: 10px;
+  height: 100%;
 }
 
 #container {
