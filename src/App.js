@@ -12,7 +12,6 @@ function App() {
   const [answer, setAnswer] = useState(String); // randomly chooses a word for the user to guess
   const [playable, setPlayable] = useState(Boolean);
   const [letter, setLetter] = useState(String); // stores the letter that the user has clicked on
-  const [mistakes, setMistakes] = useState(0);
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
   const [status, setStatus] = useState("");
@@ -26,7 +25,6 @@ function App() {
       } else {
         if (!wrongLetters.includes(letter)) {
           setWrongLetters((currentLetters) => [...currentLetters, letter]);
-          setMistakes(wrongLetters.length);
         }
       }
 
@@ -34,16 +32,20 @@ function App() {
     }
 
     function checkWin() {
-      if (mistakes === 10) setStatus("lose");
+      if (wrongLetters.length === 10) {
+        setStatus("lose");
+        return;
+      }
 
       setStatus("win");
       answer.split("").forEach((letter) => {
-        if (!correctLetters.includes(letter)) {
+        if (letter === " ") return;
+        else if (!correctLetters.includes(letter)) {
           setStatus("");
         }
       });
     }
-  }, [letter, wrongLetters, correctLetters, answer, mistakes]);
+  }, [letter, wrongLetters, correctLetters, answer]);
 
   const newGame = () => {
     setPlayable(true);
@@ -52,6 +54,7 @@ function App() {
     setCorrectLetters([]);
     setWrongLetters([]);
     setLetter("");
+    setStatus("");
   };
 
   return (
@@ -63,10 +66,10 @@ function App() {
       {playable ? (
         <div id="gameContainer">
           <div id="container">
-            <p>Lives: {10 - mistakes}</p>
+            <p>Lives: {10 - wrongLetters.length}</p>
           </div>
           <div id="container">
-            <HangmanCanvas mistakes={mistakes} />
+            <HangmanCanvas mistakes={wrongLetters.length} />
           </div>
           <div id="container">
             <Word answer={answer} correctLetters={correctLetters} />
