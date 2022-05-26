@@ -11,8 +11,7 @@ import hangman from "./hangman.png";
 import "./App.css";
 
 function App() {
-  const [answer, setAnswer] = useState(String); // randomly chooses a word for the user to guess
-  const [playable, setPlayable] = useState(Boolean);
+  const [answer, setAnswer] = useState(wordRandomiser()); // randomly chooses a word for the user to guess
   const [letter, setLetter] = useState(String); // stores the letter that the user has clicked on
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
@@ -39,8 +38,8 @@ function App() {
         return;
       }
 
-      setStatus("win");
       answer.split("").forEach((letter) => {
+        setStatus("win");
         if (letter === " ") return;
         else if (!correctLetters.includes(letter)) {
           setStatus("");
@@ -50,13 +49,12 @@ function App() {
   }, [letter, wrongLetters, correctLetters, answer]);
 
   const newGame = () => {
-    setPlayable(true);
     setAnswer(wordRandomiser()); // randomly chooses a word for the user to guess
     // Empty consts
     setCorrectLetters([]);
     setWrongLetters([]);
     setLetter("");
-    setStatus("lose");
+    setStatus("");
   };
 
   return (
@@ -65,7 +63,6 @@ function App() {
         <img src={hangman} className="App-logo" alt="logo" />
         <h1>team 15's HANGMAN</h1>
       </header>
-      {playable ? (
         <div id="gameContainer">
           <div id="container">
             <p>Lives: {10 - wrongLetters.length}</p>
@@ -84,9 +81,6 @@ function App() {
           </div>
           <button onClick={newGame}>New game</button>
         </div>
-      ) : (
-        <button onClick={newGame}>New game</button>
-      )}
       {status === "lose" || status === "win" ? (
         <Popup answer={answer} status={status} newGame={newGame} />
       ) : null}
