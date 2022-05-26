@@ -5,6 +5,8 @@ import "./App.css";
 import { AlphabetInput } from "./Components/AlphabetInput";
 import { wordRandomiser } from "./Components/WordRandomiser";
 import { HangmanCanvas } from "./Components/HangmanCanvas";
+import { Word } from "./Components/Word";
+import { WrongLetters } from "./Components/WrongLetters";
 
 function App() {
   const [answer, setAnswer] = useState(String); // randomly chooses a word for the user to guess
@@ -15,9 +17,6 @@ function App() {
   const [wrongLetters, setWrongLetters] = useState([]);
 
   useEffect(() => {
-    console.log("in app, this is the letter:", letter);
-    console.log(answer);
-  });
     seek();
     function seek() {
       if (answer.includes(letter)) {
@@ -50,22 +49,16 @@ function App() {
       {playable ? (
         <div id="gameContainer">
           <div id="container">
-            <p>Lives: {10-mistakes}</p>
+            <p>Lives: {10 - mistakes}</p>
           </div>
           <div id="container">
+            <HangmanCanvas mistakes={mistakes} />
           </div>
           <div id="container">
-            {answer.split("").map((letter, i) => 
-          <span className="letter" key={i}>
-            {correctLetters.includes(letter) ? <p>&nbsp;{letter}&nbsp;</p>: <p>&nbsp; ____ &nbsp;</p>}
-          </span>
-            )}
+            <Word answer={answer} correctLetters={correctLetters} />
           </div>
           <div id="container">
-            <p>Wrong Letters:</p>
-            {wrongLetters.map((letter) => (
-              <p> &nbsp;{letter}&nbsp; </p>
-            ))}
+            <WrongLetters wrongLetters={wrongLetters} />
           </div>
           <div id="container">
             <AlphabetInput setLetter={setLetter} />
