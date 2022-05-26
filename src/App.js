@@ -41,7 +41,7 @@ function App() {
       setStatus("win");
       answer.split("").forEach((letter) => {
         if (letter === " ") return;
-        else if (!correctLetters.includes(letter)) {
+        if (!correctLetters.includes(letter)) {
           setStatus("");
         }
       });
