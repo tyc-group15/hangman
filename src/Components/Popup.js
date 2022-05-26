@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export const Popup = ({ answer, status, newGame }) => {
   let finalMessage = "";
 
@@ -8,10 +10,10 @@ export const Popup = ({ answer, status, newGame }) => {
   }
 
   return (
-    <div id="popup-container" style={{ display: "flex", justifyContent: "center" }}>
+    <div id="popupContainer" style={{display: "flex", justifyContent: "center"}}>
       {status === "" ? null : (
         <div id="popup">
-          <h2 style={{ color: "white" }}>{finalMessage}</h2>
+          <h2 style={{ color: "white" }}>{finalMessage} <button id="closeBtn" onClick={() => document.getElementById("popupContainer").style.display = "none"}>x</button></h2>
           <p>The word was {answer}.</p>
           <button onClick={newGame}>New game</button>
         </div>
