@@ -38,8 +38,8 @@ function App() {
         return;
       }
 
+      setStatus("win");
       answer.split("").forEach((letter) => {
-        setStatus("win");
         if (letter === " ") return;
         else if (!correctLetters.includes(letter)) {
           setStatus("");
