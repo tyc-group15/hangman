@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 export const Popup = ({ answer, status, newGame }) => {
   let finalMessage = "";
 
