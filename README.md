@@ -7,23 +7,30 @@
 - `npm install`
 - `npm start`
 
-you should see the app open on your default browser after a while.
+You should see the app open on your default browser after a while.
 
-## Starting the game
+
+## Gameplay 
+Click [here](https://youtu.be/eCvjHMKt4Fg) to watch a demo.
+
+Screenshots of the gameplay can be found below.
+<br/>
+
+### Starting the game
 |Screen type| Screenshot|
 |----|----|
 | Laptop | ![](/screenshots/laptopss1.png)
 | Phone | ![](/screenshots/phoness1.png)
 | Tablet | ![](/screenshots/tabletss1.jpg)
 
-## Playing the game
+### Playing the game
 |Screen type| Screenshot|
 |----|----|
 | Laptop | ![](/screenshots/laptopss2.png)
 | Phone | ![](/screenshots/phoness2.png)
 | Tablet | ![](/screenshots/tabletss2.jpg)
 
-## Ending the game
+### Ending the game
 |Screen type| Screenshot|
 |----|----|
 | Laptop | ![](/screenshots/laptopss3.png)
