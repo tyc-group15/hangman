@@ -1,13 +1,38 @@
-# tiktokproj
+# Project A: Hangman
  hangman web app made with react
 
-# how to run 
+## How to run 
 :exclamation: in cmd line, do the following
 - navigate to the folder where you've cloned this repo
 - `npm install`
 - `npm start`
 
 you should see the app open on your default browser after a while.
+
+## Starting the game
+|Screen type| Screenshot|
+|----|----|
+| Laptop | ![](/screenshots/laptopss1.png)
+| Phone | ![](/screenshots/phoness1.png)
+| Tablet | ![](/screenshots/tabletss1.jpg)
+
+## Playing the game
+|Screen type| Screenshot|
+|----|----|
+| Laptop | ![](/screenshots/laptopss2.png)
+| Phone | ![](/screenshots/phoness2.png)
+| Tablet | ![](/screenshots/tabletss2.jpg)
+
+## Ending the game
+|Screen type| Screenshot|
+|----|----|
+| Laptop | ![](/screenshots/laptopss3.png)
+| Phone | ![](/screenshots/phoness3.png)
+| Tablet | ![](/screenshots/tabletss3.jpg)
+
+<br/>
+<hr/>
+<hr/>
 
 # Getting Started with Create React App
 
