@@ -11,7 +11,7 @@ You should see the app open on your default browser after a while.
 
 
 ## Gameplay 
-Click [here](https://youtu.be/eCvjHMKt4Fg) to watch a demo.
+Click [here](https://youtu.be/eCvjHMKt4Fg) to watch a demo and click [here](tyc-group15.github.io/hangman/) to play!
 
 Screenshots of the gameplay can be found below.
 <br/>
